@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/26cc38859f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Billeder/Logo.svg" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Hjem</a></li>
+                    <li><a href="#about">Om</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#Kontakt">Kontakt</a></li>
+                    <li><i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i></li>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UX Designer</p>
+                <h1>Kevin Narup</h1>
+            </div>
+            <a href="#Kontakt" class="kontakt-btn">Kontakt mig her!</a>
+        </div>
+    </div>  
+        <!--Aboutside-->
+    <div id="about">
+        <div class="container">
+             <div class="row">
+                <div class="about-col-1">
+                    <img src="Billeder/Om-mig.jpg" alt="Billede af mig">
+             </div>
+                 <div class="about-col-2">
+             <h1 class="sub-title">Hvem er jeg</h1>
+             <p>
+                 Mit navn er Kevin  Jeg er 23 år gammel og til dagligt studere jeg på ucl i Odense.
+                     Når jeg ikke studere så elsker jeg at komme udenfor og opleve naturen. Jeg elsker at fordybe mig kreativt og har en stor interesse for webudvikling samt andet grafisk indhold. Under her har du mulighed for læse lidt omkring hvilke kompetancer samt uddannelse jeg har.
+                    </p>
+            
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Kompetencer')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Uddannelse')" >Uddannelse </p>
+                </div>
+                    <div class="tab-contents active-tab" id="Kompetencer">
+                        <ul>
+                            <li><span>Photoshop</span><br>Undervist i at bruge Photoshop</li>
+                            <li><span>Adobe XD</span><br>Undervist i at bruge Adobe XD</li>
+                            <li><span>Illustrator</span><br>Undervist i at bruge Illustrator</li>
+                            <li><span>Lightroom</span><br>Undervist i at bruge Lightroom</li>
+                            <li><span>Indesign</span><br>Undervist i at bruge Indesign</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Uddannelse">
+                        <ul>
+                            <li><span>2005-2015</span><br>Svend Gønge Skole</li>
+                            <li><span>2015-2016</span><br>10 Klasse Vordingborg</li>
+                            <li><span>2018-2020</span><br>Vordingborg Gymnasium & Hf</li>
+                            <li><span>2023-2025</span><br>Ucl Seebladsgade</li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+        <!--Portfolio-->
+    <div id="portfolio">
+    <div class="container">
+        <h1 class="projekt-titel">Projekter</h1>
+        <div class="projekter-liste">
+            <div class="projekt">
+                <img src="Billeder/Portrait.jpg" alt="Portrætbillede af en Mand">
+                <div class="layer">
+                    <h3>Portrætbillede</h3>
+                    <p>Erfaring i at tage Portrætbilleder</p>
+                </div>
+            </div>
+            <div class="projekt">
+                <img src="Billeder/Produktbillede.jpg" alt="Produktbillede af en iskaffe">
+                <div class="layer">
+                    <h3>Produktbillede</h3>
+                    <p>Erfaring i at tage produktbilleder</p>
+                </div>
+            </div>
+            <div class="projekt">
+                <img src="Billeder/Kodning.jpg" alt="Billede af denne kode">
+                <div class="layer">
+                    <h3>Kodning</h3>
+                    <p>Dette er koden til denne hjemmeside. <br> Min næste kode kan være til din hjemmeside</p>
+                </div>
+            </div>
+            <div class="projekt">
+                <img src="Billeder/giphy-1.gif" alt="Gif af mand der kører bil">
+                <div class="layer">
+                    <h3>Animation</h3>
+                    <p>Det projekt handlede om at animere og her gjorde jeg skoven og bil i live <br> Pas på du ikke bliver kørt ned</p>
+                </div>
+         </div>
+        </div>
+    </div>
+</div>
+    <!--Kontakt-->
+<div id="Kontakt">
+    <div class="container">
+        <div class="row">
+        <div class="kontakt-left">
+            <h1 class="kontakt-title">Kontakt mig</h1>
+            <p><i class="fa-solid fa-envelope"></i></p>Kevin.narup@gmail.com
+            <p><i class="fa-solid fa-phone"></i></p>+45 61728839
+            <div class="Medier">
+                <a href="https://www.facebook.com/kevin.narup/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kevinnarup/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-narup-656898287/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="kontakt-right">
+            <form>
+                <input type="text" name="name" placeholder="Navn" required>
+                <input type="Email" name="email" placeholder="Email" required>
+                <textarea name="Message" rows="6" placeholder="Besked"></textarea>
+                <Button type="Submit" class="btn">Send</Button>
+            </form>
+            
+        </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");            
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");            
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+             }
+    </script>
+    <script>
+         var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+         sidemenu.style.right = "0";
+}
+        function closemenu(){
+         sidemenu.style.right = "-200px";
+}
+        </script>
+</body>
+</html>

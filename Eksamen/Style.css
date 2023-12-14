@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+*{
+    margin: 0; /* fjerner alle margener for alle elementer, hvilket eliminerer eventuelle standardmargener, der normalt er anvendt af browsere.*/
+    padding: 0; /* fjerner al indvendig polstring for alle elementer hvilket fjerner eventuel standardpolstring, der normalt er anvendt af browsere. */
+    font-family: 'Poppins', sans-serif;
+
+    box-sizing: border-box; /* elementets padding og border bliver inkluderet i dens samlede bredde og højde */
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #0E0C38;
+    color:  #fff;  
+}
+#header{ /* Baggrund */
+    width: 100%;
+    height: 100vh;
+    background-image: url(Billeder/Baggrund.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{ /* Menu */
+    padding: 10px 10%;
+  transition: color 0.3s ease; /* Overgangseffekt for farveskift */
+}
+.container li a:hover { 
+    color: #FF0513; /* Farve til hover*/
+}
+nav{ /* Placering af menu samt logo */ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{ /* Logo størrelse */
+    width: 160px;
+    margin: 1px;
+}
+nav ul li{ /* Menu */
+    display: inline-block;
+    list-style: none;
+    margin: 15px 20px;
+}
+nav ul li a{ /* Menu størrelse/skrift */
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    font-family: 'Bitter', serif;
+}
+.header-text p{ /* Ux designer */
+    margin-top: 500px;
+    font-size: 35px;
+    font-weight: 200;
+    font-family: 'Bitter', serif;
+}
+.header-text h1{ /* Kevin Narup */
+    font-size: 70px;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #FF0513;
+    line-height: 1.5;
+    font-weight: 1000;
+    font-family: 'Bitter', serif;
+
+}
+.kontakt-btn { /* Kontakt knap */
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #FF0513;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.kontakt-btn:hover { /* Hover effect på kontakt knap */
+    background-color: #f17d7d;
+}
+
+/*----------Om mig---------*/
+#about{ /* Hvordan det står i about */
+    padding: 80px 0;
+    color: #fff;
+}
+.row{ /* Billede placering */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{ /* venstre side */
+    flex-basis: 35%;
+}
+.about-col-1 img{ /* venstre side billede */
+    width: 100%;
+    border-radius: 250px
+    
+}
+.about-col-2{ /* højre side */
+    flex-basis: 50%;
+}
+.sub-title{ /* overskift "Hvem er jeg" */
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Bitter', serif;
+}
+.tab-titles{ /* Størrelse i skills/uddannelse */
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{  /* knap */
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{ /* hover */
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #FF0514;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{ /* hover størrelse */
+    width: 100%;
+}
+.tab-contents ul li{ /* Indhold i skills/uddannelse */
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{ /* Skills/uddannelse over */
+    color: #FF0513;
+    font-size: 14px;
+}
+.tab-contents{ /* ikke aktivt */
+    display: none;
+  
+}
+.tab-contents.active-tab{ /* aktivt */
+    display: block;
+}
+/*----------Portfolio---------*/
+#portfolio{ /* Hvordan det står i portfolio */
+    padding: 50px 0;
+    background: #040221;
+}
+.projekt-titel{ /* Projekter overskrift */
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-family: 'Bitter', serif;
+    
+}
+.projekter-liste{ /* Kasser */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projekt{ /* kasser  */
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.projekt img{ /* kasser billede */
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer{ /* indstillinger for projekt hover */
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#FF0513);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.2s;
+
+}
+.layer h3{ /* skrift i hover (projektkasse) */
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: 'Bitter', serif;
+}
+.projekt:hover .layer{ /* Hover indstillinger over projekt */
+    height: 100%;
+}
+/*---------Kontakt--------*/
+#Kontakt{ /* Indstillinger i kontakt */
+    position: relative; /* Gør det muligt at positionere elementet */
+    top: 175px; /* Flytter elementet 50 pixels nedad fra dets normale position */
+    /* Andre relevante stilarter */
+    background: #0E0C38
+}
+.kontakt-title{ /* Kontakt overskrift */
+    font-weight: 600;
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-family: 'Bitter', serif;
+}
+.kontaktmail{ /* Mail */
+   font-size: 20px; 
+}
+.kontakt-left{ /* Venstre */
+    flex-basis: 35%;
+    
+}
+.kontakt-right{ /* Højre */
+    flex-basis: 60%;
+}
+.kontakt-left p{ /* Venstre størrelse fra toppen */
+    margin-top: 30px;
+}
+.Medier{ /* Ikon */
+    margin-top: 30px;
+}
+.Medier a{ /* Ikon indstillinger */
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+    display: inline-block;
+    transition: transform 0.5s
+}
+.Medier a:hover{ /* Hover */
+    color: #FF0513;
+    transform: translateY(-5px);
+}
+.kontakt-right form{ /* Kontaktformular størrelse */
+    width: 100%;
+}
+form input, form textarea{ /* Kontaktformular tekstområde */
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #040221;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+form .btn{ /* Send kasse */
+    display: block;
+    margin: 50px auto;
+    border: 0px solid;
+    text-decoration: none;
+    padding: 14px 50px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #FF0513;
+    border-radius: 25px;
+    color: #fff;
+    transition: background 0.2s;
+}
+.btn:hover{ /* Send kasse hover */
+    background: #f17d7d;
+}
+/*-------------- css lille skærm --------*/
+nav .fa-regular{ /* Ikon luk */
+    display: none;
+}
+nav .fa-solid{ /* Ikon menu */
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    #header{ /* Mindre billede til lille skærm */
+        background-image: url(Billeder/baggrundmobil.jpg);
+    }
+    .header-text{ /* Størrelse på tekst til lille skærm */
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{ /* Overskrift lille skærm */
+        font-size: 30px;
+    }
+    nav .fa-regular{ /* Størrelse på luk ikon */
+        display: block;
+        font-size: 25px;
+    }
+    nav .fa-solid{ /* Størrelse på menu ikon */
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{ /* Menu lilleskærm */
+        background: #040221;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.2s;
+    }
+    nav ul li{ /* Menu lille skærm */
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-regular{ /* Ikon luk med i menu */
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{ /* Ux Designer lille skærm */
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{ /* Hvem er jeg størrelse */
+        flex-basis: 100%;
+    }
+    .kontakt-left, .kontakt-right{ /* Kontakt størrelse */
+        flex-basis: 100%;
+    }
+}
