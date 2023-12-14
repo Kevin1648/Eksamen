@@ -17,7 +17,7 @@ body{
 #header{ /* Baggrund */
     width: 100%;
     height: 100vh;
-    background-image: url(Billeder/Baggrund.png);
+    background-image: url(Billeder/Baggrund.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -289,7 +289,7 @@ nav .fa-solid{ /* Ikon menu */
 
 @media only screen and (max-width:600px){
     #header{ /* Mindre billede til lille skærm */
-        background-image: url(Billeder/baggrundmobil.png);
+        background-image: url(Billeder/baggrundmobil.jpg);
     }
     .header-text{ /* Størrelse på tekst til lille skærm */
         margin-top: 100%;
